@@ -105,8 +105,8 @@ Sample fields:
 
 ## 🔗 External Resources
 
-- Google Sheets Link: (to be added)
-- Demo Video: (to be added)
+- Google Sheets Link: https://docs.google.com/spreadsheets/d/1W1wMPHSTZb5CTTiJvManJQzpa_oaaQ0FYtu8mRMs-1o/edit?usp=sharing
+- Demo Video: https://drive.google.com/file/d/1lLNbmxPjddIXg7KMQaTijS2fdC-X-OiP/view?usp=sharing
 
 ---
 
