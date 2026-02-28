@@ -7,19 +7,21 @@ Whenever a new lead is added to Google Sheets, the system automatically evaluate
 
 ## 📁 Project Structure
 
-root
-├── backend      # Backend server (Node.js + MongoDB)
-├── frontend     # Frontend application
+```text
+root/
+│
+├── backend/     # Backend server (Node.js + MongoDB)
+├── frontend/    # Frontend application
 └── README.md
-
+```
 ---
 
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
 
-git clone <your-repository-url>  
-cd <repository-name>
+git clone https://github.com/Tannic-Chalice/bloc.git  
+cd bloc
 
 ---
 
