@@ -49,7 +49,8 @@ Ensure MongoDB is running locally or configure a MongoDB Atlas connection string
 
 ## 🖼️ Automation Workflow Screenshot
 
-(Add n8n automation workflow screenshot here)
+<img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/5fbd38b2-5eaf-4ae2-9038-2fa8ee890f1f" />
+
 
 ---
 
