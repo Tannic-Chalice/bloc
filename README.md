@@ -7,10 +7,9 @@ Whenever a new lead is added to Google Sheets, the system automatically evaluate
 
 ## 📁 Project Structure
 
-root/
-│
-├── backend/     # Backend server (Node.js + MongoDB)
-├── frontend/    # Frontend application
+root
+├── backend      # Backend server (Node.js + MongoDB)
+├── frontend     # Frontend application
 └── README.md
 
 ---
