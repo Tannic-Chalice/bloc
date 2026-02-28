@@ -56,16 +56,43 @@ Ensure MongoDB is running locally or configure a MongoDB Atlas connection string
 
 ## 🧠 Development Logic Overview
 
-The system automatically distributes incoming leads to callers in a fair and scalable manner.
+The core objective of this system is to automatically distribute incoming leads to sales callers in a **fair, scalable, and rule-based manner**.
 
-- Any number of callers can be added
-- Each caller has a daily assignment limit (default: 50)
-- Leads are received through Google Sheets
-- n8n automation triggers on every new row
-- Smart assignment logic selects an eligible caller
-- Data is stored and managed using MongoDB
+Leads are assigned using a **Round Robin–based smart assignment logic**, ensuring equal distribution while respecting caller constraints such as state mapping and daily lead limits.
+
+### High-Level Flow
+- Leads are added to Google Sheets
+- n8n automation detects new rows in real time
+- Lead data is forwarded to the backend API
+- Backend applies Round Robin assignment logic
+- Assigned leads and caller workloads are stored in MongoDB
 
 ---
+
+## 🔁 Smart Lead Assignment Logic (Round Robin)
+
+Every incoming lead is automatically assigned to a sales caller using a **Round Robin strategy**, as defined in the assignment requirements.
+
+### 1️⃣ State-Based Assignment
+- If a lead belongs to a specific state, it is first matched with callers assigned to that state
+- If multiple callers are eligible for the same state, **Round Robin** is applied among them
+- If no caller is mapped to the lead’s state, the system falls back to a **global Round Robin** across all callers
+
+> Assigned states also imply regional language capability.
+
+---
+
+### 2️⃣ Daily Lead Cap Enforcement
+- Each caller has a configurable **daily lead limit** (default: 50 leads/day)
+- Once a caller reaches their daily cap, they are skipped automatically
+- The system continues Round Robin among remaining eligible callers
+
+---
+
+### 3️⃣ Round Robin Distribution
+- Leads are distributed sequentially across eligible callers
+- The assignment pointer updates dynamically after each assignment
+- The logic ensures fairness even when callers hit daily limits
 
 ## 🗄️ Database Structure (MongoDB – NoSQL)
 
