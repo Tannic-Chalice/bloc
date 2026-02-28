@@ -43,7 +43,6 @@ npm install
 npm start
 ```
 
-Ensure MongoDB is running locally or configure a MongoDB Atlas connection string in environment variables.
 
 ---
 
