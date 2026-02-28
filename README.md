@@ -20,24 +20,28 @@ root/
 
 ### 1️⃣ Clone the Repository
 
+```text
 git clone https://github.com/Tannic-Chalice/bloc.git  
 cd bloc
-
+```
 ---
 
 ### 2️⃣ Frontend Setup
 
+```text
 cd frontend  
 npm install  
 npm start
-
+```
 ---
 
 ### 3️⃣ Backend Setup
 
+```text
 cd backend  
 npm install  
 npm start
+```
 
 Ensure MongoDB is running locally or configure a MongoDB Atlas connection string in environment variables.
 
